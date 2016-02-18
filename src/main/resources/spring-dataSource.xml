@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<!-- 	
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName"><value>springdemo</value></property>
+		<property name="resourceRef"><value>true</value></property>
+	</bean> 
+-->
+	 <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass"><value>${jdbc.driverClass}</value></property>
+        <property name="jdbcUrl"><value>${jdbc.jdbcUrl}</value></property>
+        
+        <property name="user"><value>${jdbc.user}</value></property>
+        <property name="password"><value>${jdbc.password}</value></property>
+        <property name="minPoolSize"><value>${jdbc.miniPoolSize}</value></property>
+        
+         <property name="maxPoolSize"><value>${jdbc.maxPoolSize}</value></property>
+        <property name="initialPoolSize"><value>${jdbc.initialPoolSize}</value></property>
+        
+        <property name="maxIdleTime"><value>${jdbc.maxIdleTime}</value></property>
+        <property name="acquireIncrement"><value>${jdbc.acquireIncrement}</value></property>
+        <property name="acquireRetryAttempts"><value>${jdbc.acquireRetryAttempts}</value></property>
+        
+         <property name="acquireRetryDelay"><value>${jdbc.acquireRetryDelay}</value></property>
+        <property name="testConnectionOnCheckin"><value>${jdbc.testConnectionOnCheckin}</value></property>
+        
+        <property name="idleConnectionTestPeriod"><value>${jdbc.idleConnectionTestPeriod}</value></property>
+        <property name="checkoutTimeout"><value>${jdbc.checkoutTimeout}</value></property>
+        <property name="preferredTestQuery"><value>${jdbc.preferredTestQuery}</value></property>
+    </bean>
+
+</beans>
