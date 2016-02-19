@@ -8,7 +8,9 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
      http://www.springframework.org/schema/context/spring-context-3.0.xsd  
      http://www.springframework.org/schema/tx  
      http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">  
-
+	<context:annotation-config />
+	<context:component-scan base-package="com.springdemo.controller">
+	</context:component-scan>
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/"></property>
 		<property name="suffix" value=".jsp"></property>

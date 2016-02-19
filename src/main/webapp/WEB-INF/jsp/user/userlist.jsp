@@ -7,6 +7,6 @@
 <title>用户列表</title>
 </head>
 <body>
-用户名：
+用户名：<%=request.getAttribute("username") %>
 </body>
 </html>

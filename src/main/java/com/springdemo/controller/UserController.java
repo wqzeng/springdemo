@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-	@RequestMapping(value = "/userlist.action")
+	@RequestMapping(value = "/userlist")
 	public String bankList(HttpServletRequest request) {
 		request.setAttribute("username", "ÔøÎ°Ç¿");
 		return "user/userlist";

@@ -65,11 +65,12 @@
 	</servlet-mapping>
     <servlet-mapping>
         <servlet-name>spring-mvc</servlet-name>
-        <url-pattern>*.jsp</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>spring-mvc</servlet-name>
         <url-pattern>*.json</url-pattern>
     </servlet-mapping>
     <!-- Spring MVC配置结束-->
+    <welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>
