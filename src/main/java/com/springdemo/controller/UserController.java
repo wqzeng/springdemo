@@ -3,10 +3,11 @@
  */
 package com.springdemo.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 
 /**
  * @author Travelsky
@@ -15,9 +16,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-	@RequestMapping(value = "/userlist")
+    String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @RequestMapping(value = "/userlist")
 	public String bankList(HttpServletRequest request) {
-		request.setAttribute("username", "��ΰǿ");
+        Date date=new Date();
+		request.setAttribute("username", "曾伟强");
 		return "user/userlist";
 	}
 }
