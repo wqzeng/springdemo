@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
 /**
- * @author Travelsky
+ * @author moke
  * 
  */
 @Controller
@@ -29,7 +29,7 @@ public class UserController {
     @RequestMapping(value = "/userlist")
 	public String bankList(HttpServletRequest request) {
         Date date=new Date();
-		request.setAttribute("username", "曾伟强");
+		request.setAttribute("username", "wqzeng");
 		return "user/userlist";
 	}
 }

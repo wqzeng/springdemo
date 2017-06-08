@@ -1,16 +1,17 @@
 package com.springdemo.dao;
 
-import java.util.List;
-import javax.annotation.Resource;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.orm.hibernate3.HibernateCallback;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
+import javax.annotation.Resource;
+import java.util.List;
+
 /**
  *
- * @author Travelsky
+ * @author moke
  */
 public class HibernateDao extends HibernateDaoSupport {
     public HibernateDao() {
